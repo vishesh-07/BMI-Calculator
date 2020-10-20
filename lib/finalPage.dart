@@ -63,7 +63,7 @@ class _FinalPageState extends State<FinalPage> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(40.0),
                 child: Text(
                   'BMI Calculator',
                   style: TextStyle(color: selection,fontSize: 20,fontWeight: FontWeight.bold),
