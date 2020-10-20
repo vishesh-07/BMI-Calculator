@@ -54,28 +54,21 @@ class _FinalPageState extends State<FinalPage> {
 
   Widget build(BuildContext context) {
     return WillPopScope(
-      
-          onWillPop: ()async {SystemChannels.platform.invokeMethod('SystemNavigator.pop');return false;  },
-          child: Scaffold(
-        // appBar: AppBar(
-        //   iconTheme: IconThemeData(
-        //     color: selection, //change your color here
-        //   ),
-        //   shape: ContinuousRectangleBorder(
-        //       borderRadius: BorderRadius.only(
-        //           bottomLeft: Radius.circular(35.0),
-        //           bottomRight: Radius.circular(35.0))),
-        //   title: Text(
-        //     'BMI Calculator',
-        //     style: TextStyle(color: selection),
-        //   ),
-        //   centerTitle: true,
-        //   elevation: 0.0,
-        //   backgroundColor: Colors.transparent,
-        // ),
+      onWillPop: () async {
+        SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+        return false;
+      },
+      child: Scaffold(
         body: Center(
           child: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'BMI Calculator',
+                  style: TextStyle(color: selection,fontSize: 20,fontWeight: FontWeight.bold),
+                ),
+              ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.07,
               ),
@@ -121,6 +114,5 @@ class _FinalPageState extends State<FinalPage> {
         ),
       ),
     );
-    
   }
 }
